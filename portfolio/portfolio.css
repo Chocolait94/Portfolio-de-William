@@ -1,0 +1,148 @@
+/* Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* 🔥 Background Video */
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.6); /* Légèrement plus sombre pour un meilleur contraste */
+}
+
+/* 🎇 Texte principal avec effet néon */
+.sign {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  animation: fadeIn 2.5s ease-in-out; /* Animation plus fluide */
+}
+
+span {
+  font-size: 5.6rem;
+  text-align: center;
+  line-height: 1.2;
+  color: #c6e2ff;
+  text-transform: uppercase;
+  animation: neon 1.5s ease-in-out infinite alternate; /* Animation plus lente et fluide */
+  font-family: 'Lobster', cursive;
+}
+
+/* ✨ Section Continue */
+.continue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -90px;
+  animation: fadeIn 3s;
+}
+
+/* 🎬 Start Button */
+.start-btn {
+  display: inline-block;
+  position: relative;
+  top: -80px;
+  padding: 12px 30px;
+  margin-top: 20px;
+  background: linear-gradient(90deg, #30d5c8, #0088ff);
+  color: #000;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(48, 213, 200, 0.6);
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Transition plus fluide */
+  animation: pulse 2s infinite; /* Ajout d'un effet de pulsation */
+}
+
+.start-btn:hover {
+  background: linear-gradient(90deg, #0088ff, #30d5c8);
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(48, 213, 200, 0.9);
+}
+
+/* ✨ Keyframes */
+@keyframes neon {
+  0% {
+    text-shadow:
+      0 0 10px rgba(202, 228, 225, 0.92),
+      0 0 30px rgba(202, 228, 225, 0.34),
+      0 0 12px rgba(30, 132, 242, 0.52),
+      0 0 21px rgba(30, 132, 242, 0.92),
+      0 0 34px rgba(30, 132, 242, 0.78),
+      0 0 54px rgba(30, 132, 242, 0.92);
+  }
+  50% {
+    text-shadow:
+      0 0 15px rgba(255, 255, 255, 1),
+      0 0 35px rgba(202, 228, 225, 0.5),
+      0 0 20px rgba(30, 132, 242, 0.6),
+      0 0 30px rgba(30, 132, 242, 0.9),
+      0 0 45px rgba(30, 132, 242, 1),
+      0 0 65px rgba(30, 132, 242, 1);
+  }
+  100% {
+    text-shadow:
+      0 0 12px rgba(202, 228, 225, 1),
+      0 0 35px rgba(202, 228, 225, 0.5),
+      0 0 15px rgba(30, 132, 242, 0.6),
+      0 0 25px rgba(30, 132, 242, 0.9),
+      0 0 40px rgba(30, 132, 242, 1),
+      0 0 60px rgba(30, 132, 242, 1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(48, 213, 200, 0.6);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(48, 213, 200, 0.8);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 15px rgba(48, 213, 200, 0.6);
+  }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  span {
+    font-size: 3.8rem;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  .start-btn {
+    font-size: 1.2rem;
+    padding: 10px 25px;
+  }
+}

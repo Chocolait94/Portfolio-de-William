@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IrisTech - Futuristic Eyewear</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #000428, #004e92);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: rgba(0, 0, 0, 0.9);
+            border-bottom: 2px solid #00ffcc;
+            box-shadow: 0 2px 20px #00ffcc;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            color: #00ffcc;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        nav a:hover {
+            color: #00ffcc;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 150px 20px;
+            background: url('futuristic-glasses-neon.jpg') no-repeat center center/cover;
+            position: relative;
+            color: white;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero h2 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            z-index: 1;
+            position: relative;
+            text-shadow: 0 0 20px #00ffcc;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+            z-index: 1;
+            position: relative;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+
+        .hero a {
+            text-decoration: none;
+            background-color: #00ffcc;
+            color: black;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s, transform 0.3s;
+            z-index: 1;
+            position: relative;
+        }
+
+        .hero a:hover {
+            background-color: #00cc99;
+            transform: scale(1.1);
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            padding: 60px 10%;
+            background: linear-gradient(120deg, #002233, #004466);
+            box-shadow: 0 -10px 30px #00ffcc inset;
+        }
+
+        .feature {
+            text-align: center;
+            max-width: 300px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 20px #00ffcc;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 40px #00ffcc;
+        }
+
+        .feature img {
+            width: 100px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px #00ffcc);
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px #00ffcc;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            font-size: 0.9rem;
+            border-top: 2px solid #00ffcc;
+            box-shadow: 0 -2px 20px #00ffcc;
+        }
+
+        footer a {
+            color: #00ffcc;
+            text-decoration: none;
+            transition: text-shadow 0.3s;
+        }
+
+        footer a:hover {
+            text-shadow: 0 0 10px #00ffcc;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>IrisTech</h1>
+    <nav>
+        <a href="Accueil (1).html">Accueil</a>
+        <a href="Produitt.html">Produit</a>
+        <a href="Recrutemennt.html">Recrutement</a>
+        <a href="Iristech 3.html">Iristech</a>
+        <a href="A propos 1.html">A propos</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Bienvenue dans le future</h2>
+    <p>Faites l’expérience d’une innovation et d’un style inégalés avec les lunettes intelligentes de pointe d’IrisTech. Transformez votre façon de voir le monde aujourd'hui.</p>
+    <a href="#features">Découvrez plus</a>
+</section>
+
+<section id="features" class="features">
+    <div class="feature">
+        <img src="smart-design-icon-neon.png" alt="Smart Design">
+        <h3>Smart Design</h3>
+        <p>Elegant et léger, parfait pour tout occasion</p>
+    </div>
+    <div class="feature">
+        <img src="ar-vision-icon-neon.png" alt="AR Vision">
+        <h3>AR Vision</h3>
+        <p>Superpositions de réalité améliorée pour vous tenir informé en temps réel.</p>
+    </div>
+    <div class="feature">
+        <img src="long-battery-icon-neon.png" alt="Long Battery">
+        <h3>All-Day Battery</h3>
+        <p>Restez alimenté du lever au coucher du soleil grâce à la durée de vie prolongée de la batterie.</p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 IrisTech. All rights reserved. | <a href="#contact">Contactez Nous</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements</title>
+    <!-- Lien css -->
+    <link rel="stylesheet" href="event2.0.css">  
+    <!-- Lien css -->
+    <!--lien google + icônes boxicons-->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400..700,0..1,0" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!--lien google + icônes boxicons-->
+    <!--lien JS-->
+    <script src="search-bar.js" defer></script>
+    <!--lien JS-->
+    <style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <div class="menu" id="menuBtn"><i class="fas fa-bars"></i></div>
+            <div class="site-name">Free S-Cool</div>
+            <img
+                class="logo"
+                src="image du site/Logo Free S-cool.jpg"
+                alt="logo"
+            />
+
+            <div class="gold">
+                <span class="counter-gold">00000</span>
+                <img
+                    src="image du site/gold berry.svg"
+                    alt="gold"
+                    class="berry-gold"
+                />
+            </div>
+            <div class="silver">
+                <span class="counter-silver">00000</span>
+                <img
+                    src="image du site/berry remix.svg"
+                    alt="silver"
+                    class="berry-silver"
+                />
+            </div>
+        </div>
+
+        <ul class="navbar-center" id="navbarMenu">
+            <li><a href="#">Actualités</a></li>
+            <li><a href="#">Freemaps</a></li>
+            <li><a href="event.html">Évènements</a></li>
+            <li><a href="#">Armurerie</a></li>
+            <li><a href="#">Cupidon</a></li>
+            <li><a href="#">Podcasts</a></li>
+            <li><a href="#">Boutique</a></li>
+            <li><a href="#">Galerie</a></li>
+        </ul>
+
+        <div class="navbar-right">
+            <span title="Favori"><i class="bx bx-star" style = "color : #536ee9"></i></span>
+            <span title="Leaderboard"><i class='bx bx-trophy'></i></span>
+            <span title="S'inscrire"><i class="bx bx-user"></i></span>
+            <span title="Recherche"><i id = "searchIcon" class="bx bx-search"></i></span>
+        </div>
+        <div class="search-bar-container" id="searchBar">
+            <input type="text" placeholder="Rechercher ici" />
+            <span class="material-symbols-outlined" id="closeSearch">close</span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <span class="close-menu material-symbols-outlined" id="closeMenu">close</span>
+        <ul class="mobile-links">
+            <li><span class="material-symbols-outlined">article</span> Actualités</li>
+            <li><span class="material-symbols-outlined">map</span> Free Maps</li>
+            <li><span class="material-symbols-outlined">event</span> Evènements</li>
+            <li><span class="material-symbols-outlined">shield</span> Armurerie</li>
+            <li><span class="material-symbols-outlined">public</span> Cupidon</li>
+            <li><span class="material-symbols-outlined">headphones</span> Podcasts</li>
+            <li><span class="material-symbols-outlined">storefront</span> Boutique</li>
+            <li><span class="material-symbols-outlined">photo_library</span> Gallerie</li>
+        </ul>
+        <div class="mobile-user">
+            <span class="material-symbols-outlined">account_circle</span>
+            Adrien Laffarge
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <main>
+        <section class="events">
+            <h1>Événements<span class="material-icons-sharp">circle</span></h1>
+
+            <!-- Catégorie Culturel -->
+            <div class="category">
+                <h2>Culturel</h2>
+                <div class="event-list">
+                    <!-- Événement 1 -->
+                    <div class="event-item">
+                        <div class="event-card">
+                            <div class="event-image-wrapper">
+                                <img src="image du site/Dune_partie_2.jpg" alt="Affiche du film Dune partie 2">
+                                <div class="blue-circle"></div>
+                                <div class="icon-top-right">
+                                    <span class="material-symbols-outlined">star</span>
+                                </div>
+                                <div class="like-count">12345<span class="material-symbols-outlined">favorite</span></div>
+                            </div>
+                            <div class="event-details">
+                                <h3>Sortie cinéma Dune partie 2</h3>
+                                <p>Description de l'événement</p>
+                                <p><strong>Lieu : Cinéma 23 av. Jesaispasquoi</strong></p>
+                                <p><strong>Acteur : Harvaard, campus de Marseille, Amélie V.</strong></p>
+                                <p><strong>Date : 12/05, 14/05, 15/05</strong></p>
+                                <a href="C:\Users\Choco\Documents\stage 2.0\index.html"><button>Réserver maintenant</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Événement 2 -->
+                    <div class="event-item">
+                        <div class="event-card">
+                            <div class="event-image-wrapper">
+                                <img src="image du site/Dune_partie_2.jpg" alt="Affiche du film Dune partie 2">
+                                <div class="blue-circle"></div>
+                                <div class="icon-top-right">
+                                    <span class="material-symbols-outlined">star</span>
+                                </div>
+                                <div class="like-count">12345<span class="material-symbols-outlined">favorite</span></div>
+                            </div>
+                            <div class="event-details">
+                                <h3>Sortie cinéma Dune partie 2</h3>
+                                <p>Description de l'événement</p>
+                                <p><strong>Lieu : Cinéma 23 av. Jesaispasquoi</strong></p>
+                                <p><strong>Acteur : Harvaard, campus de Marseille, Amélie V.</strong></p>
+                                <p><strong>Date : 12/05, 14/05, 15/05</strong></p>
+                                <a href="C:\Users\Choco\Documents\stage 2.0\index.html"><button>Réserver maintenant</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Événement 3 -->
+                    <div class="event-item">
+                        <div class="event-card">
+                            <div class="event-image-wrapper">
+                                <img src="image du site/Dune_partie_2.jpg" alt="Affiche du film Dune partie 2">
+                                <div class="blue-circle"></div>
+                                <div class="icon-top-right">
+                                    <span class="material-symbols-outlined">star</span>
+                                </div>
+                                <div class="like-count">12345<span class="material-symbols-outlined">favorite</span></div>
+                            </div>
+                            <div class="event-details">
+                                <h3>Sortie cinéma Dune partie 2</h3>
+                                <p>Description du film</p>
+                                <p><strong>Lieu : Cinéma 23 av. Jesaispasquoi</strong></p>
+                                <p><strong>Acteur : Harvaard, campus de Marseille, Amélie V.</strong></p>
+                                <p><strong>Date : 12/05, 14/05, 15/05</strong></p>
+                                <a href="C:\Users\Choco\Documents\stage 2.0\index.html"><button>Réserver maintenant</button></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Catégorie Sportif -->
+            <div class="category">
+                <h2>Sportif</h2>
+                <p>Il n'y a pas d'événements à venir</p>
+            </div>
+
+            <!-- Catégorie Académique -->
+            <div class="category">
+                <h2>Académique</h2>
+                <p>Il n'y a pas d'événements à venir</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer copyright -->
+    <footer>
+        <p>© 2025 Free S-Cool. Tous droits réservés.</p>
+    </footer>
+</body>
+    <script>
+        // Toggle menu on small screens
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const closeMenu = document.getElementById("closeMenu");
+
+        // Ouvre le menu mobile
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.add("active");
+        });
+
+        // Ferme le menu mobile
+        closeMenu.addEventListener("click", () => {
+            mobileMenu.classList.remove("active");
+        });
+    </script>
+</html>

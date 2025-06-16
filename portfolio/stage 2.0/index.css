@@ -543,7 +543,7 @@ body {
     justify-content: center; /* Centre les colonnes quand elles wrap */
     border-radius : 1rem;
     padding : 2rem; 
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(36px);
     box-shadow: 0 0 40px #ad7add33;
     animation : fadeIn 0.5s ease-in-out; /* Animation d'apparition */
 }

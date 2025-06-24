@@ -12,6 +12,9 @@ body {
     color: #fff;
     text-align: center;
 }
+html  {
+    scroll-behavior: smooth; /* Pour un défilement fluide */
+}
 
 /* Vidéo de fond */
 #background-video {
@@ -668,4 +671,338 @@ footer p:hover {
     height: 44px;
     margin-left: 0.5rem;
   }
+}
+
+/* Section principale */
+#BTS {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 1rem;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 20px #ad7add33;
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 3s ease-in-out;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Effet néon sur le titre */
+#BTS h1 {
+    color: #00eaff;
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    letter-spacing: 1px;
+    text-align: center;
+    animation: slideDown 0.8s 0.2s backwards;
+    background: none;
+}
+
+/* Effet néon sur les options de la liste */
+#BTS ul li {
+    background: rgba(234, 240, 251, 0.15);
+    margin-bottom: 0.7rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    box-shadow:
+        0 0 8px #1a73e8,
+        0 0 16px #00eaff;
+    position: relative;
+    animation: fadeInList 0.7s;
+    transition: background 0.3s, color 0.3s;
+    border: 1.5px solid #00eaff;
+}
+
+/* Effet néon sur le strong */
+#BTS ul li strong {
+    color: #00eaff;
+    text-shadow:
+        0 0 6px #00eaff,
+        0 0 12px #00eaff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Section Documentation */
+.documentation {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 1rem;
+  box-shadow: 0 0 20px #00eaff33;
+  color: #fff;
+  text-align: center;
+  animation: fadeIn 2s;
+}
+
+/* Hover néon sur tous les h1 */
+h1 {
+  color: #00eaff;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 8px #00eaff99;
+  transition: 
+    color 0.2s,
+    text-shadow 0.2s,
+    letter-spacing 0.2s,
+    transform 0.2s;
+  cursor: pointer;
+}
+h1:hover,
+h1:focus {
+  color: #00eaff;
+  text-shadow: 0 0 16px #00eaff, 0 0 32px #00eaff99;
+  letter-spacing: 2px;
+  transform: scale(1.03);
+  outline: none;
+}
+
+.documentation p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  transition: color 0.2s;
+}
+.documentation p:hover {
+  color: #00eaff;
+}
+
+/* ===== Docs Links Layout ===== */
+.docs-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.docs-links > div {
+  flex: 1 1 300px;
+  max-width: 600px;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0,0,0,0.35);
+  border-radius: 0.7rem;
+  box-shadow: 0 0 12px #00eaff22;
+  padding: 1rem 0.5rem;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+.docs-links > div:hover {
+  box-shadow: 0 0 24px #00eaff77;
+  background: rgba(0,0,0,0.55);
+}
+
+/* ===== Docs Content (iframe, img, embed) ===== */
+.docs-links iframe,
+.docs-links embed,
+.docs-links img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 0.7rem;
+  box-shadow: 0 0 16px #00eaff33;
+  background: #111;
+  margin-bottom: 0.5rem;
+  border: none;
+  display: block;
+  transition: box-shadow 0.2s, filter 0.2s, transform 0.2s;
+}
+
+.docs-links iframe:hover,
+.docs-links embed:hover,
+.docs-links img:hover {
+  box-shadow: 0 0 32px #00eaffcc;
+  filter: brightness(1.08) drop-shadow(0 0 8px #00eaff);
+  transform: scale(1.025);
+}
+
+.docs-links iframe,
+.docs-links embed {
+  background: #111;
+}
+
+.docs-links iframe {
+  height: 500px;
+}
+
+.docs-links embed {
+  height: 350px;
+}
+
+.docs-links img {
+  object-fit: contain;
+  background: #fff;
+  height: 350px;
+}
+
+/* ===== Docs Links (Boutons/Liens) ===== */
+.docs-links a {
+  color: #00eaff;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 0.5rem;
+  text-decoration: none;
+  transition: color 0.2s, text-shadow 0.2s, background 0.2s, border 0.2s;
+  text-align: center;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  padding: 0.4em 1.1em;
+  border-radius: 0.5em;
+  border: 1.5px solid transparent;
+}
+.docs-links a:hover {
+  color: #fff;
+  background: #00eaff;
+  text-shadow: 0 0 8px #00eaff;
+  border: 1.5px solid #00eaff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .docs-links {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .docs-links > div {
+    max-width: 100%;
+  }
+  .docs-links iframe,
+  .docs-links embed,
+  .docs-links img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .documentation {
+    padding: 1rem;
+  }
+  .docs-links > div {
+    padding: 0.5rem 0.2rem;
+  }
+  .docs-links iframe,
+  .docs-links embed,
+  .docs-links img {
+    height: 220px;
+    min-height: 120px;
+  }
+  .docs-links a {
+    font-size: 0.98rem;
+  }
+}
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 80px;
+  right: 40px;
+  z-index: 999;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 10px #1a73e8;
+  font-size: 18px;
+  display: none;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#scrollToTopBtn:hover {
+  transform: scale(1.15);
+  background-color: #1a73e8;
+}
+
+.no-marker {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* Ajout de hover moderne sur tous les liens du site */
+
+a,
+a:visited {
+  transition: 
+    color 0.2s,
+    background 0.2s,
+    border 0.2s,
+    text-shadow 0.2s,
+    box-shadow 0.2s;
+  outline: none;
+}
+
+a:hover,
+a:focus {
+  color: #00eaff !important;
+  background: rgba(0,234,255,0.08);
+  text-shadow: 0 0 8px #00eaff;
+  border-radius: 0.4em;
+  box-shadow: 0 0 8px #00eaff33;
+  outline: none;
+  text-decoration: none;
+}
+
+/* Pour les boutons/links spéciaux déjà stylés (ex: .docs-links a, .contact a) */
+.docs-links a:hover,
+.docs-links a:focus {
+  color: #fff !important;
+  background: #00eaff !important;
+  text-shadow: 0 0 8px #00eaff;
+  border: 1.5px solid #00eaff;
+  box-shadow: 0 0 16px #00eaff77;
+}
+
+.contact a:hover,
+.contact a:focus {
+  color: #fff !important;
+  background: #00eaff !important;
+  text-shadow: 0 0 8px #00eaff;
+  border-radius: 0.4em;
+  text-decoration: underline;
+}
+
+.links a:hover,
+.links a:focus {
+  color: #00F0FF !important;
+  text-shadow: 0 0 8px #00F0FF;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #fff !important;
+  background: #00F0FF !important;
+  text-shadow: 0 0 8px #00F0FF;
+  border-radius: 0.4em;
+}
+
+/* Pour les images liens */
+a img:hover,
+a:focus img {
+  filter: brightness(1.1) drop-shadow(0 0 12px #00eaff);
+  transform: scale(1.08);
+  transition: filter 0.2s, transform 0.2s;
+}
+
+/* Ajout de hover moderne sur toutes les balises h1 */
+h1 {
+  transition: 
+    color 0.2s,
+    text-shadow 0.2s,
+    letter-spacing 0.2s,
+    transform 0.2s;
+  cursor: pointer;
+}
+
+
+h1:focus {
+  color: #00eaff;
+  text-shadow: 0 0 16px #00eaff, 0 0 32px #00eaff99;
+  letter-spacing: 2px;
+  transform: scale(1.03);
+  outline: none;
 }

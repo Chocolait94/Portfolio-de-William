@@ -10,6 +10,11 @@ body {
     overflow-y: auto;   /* Permet le défilement vertical si le contenu dépasse */
     display: flex;
     flex-direction: column;
+    background-image: url('background.png');
+    background-size: cover; /* Couvre tout l'écran */
+    background-position: center; /* Centre l'image de fond */
+    background-attachment: fixed; /* Fixe l'image de fond pour un effet de parallaxe */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
 }
 
 /* ---------- Navbar ---------- */
@@ -536,6 +541,11 @@ body {
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: center; /* Centre les colonnes quand elles wrap */
+    border-radius : 1rem;
+    padding : 2rem; 
+    backdrop-filter: blur(36px);
+    box-shadow: 0 0 40px #ad7add33;
+    animation : fadeIn 0.5s ease-in-out; /* Animation d'apparition */
 }
 
 .col-md-4 {
@@ -652,7 +662,7 @@ footer {
     font-size: 0.9rem;
     color: #999;
     margin-top: auto; /* Pousse le footer en bas de la page */
-    border-top: 1px solid #ddd;
+    border-top: 1px;
     flex-shrink: 0; /* Empêche le footer de rétrécir */
 }
 

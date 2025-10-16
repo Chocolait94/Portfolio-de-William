@@ -3,158 +3,576 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Principal</title>
+    <title>William DU - Portfolio BTS SIO SLAM</title>
     <link rel="stylesheet" href="main_page.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Lobster&display=swap" rel="stylesheet">
+    <script src="scroll.js" defer></script>
 </head>
 <body>
     <!-- Vidéo de fond décorative -->
-    <video autoplay loop muted id="background-video">
-        <source src="orange-train-at-sunset.1920x1080.mp4" type="video/mp4">
+    <video autoplay loop muted playsinline id="background-video">
+        <source src="video background/orange-train-at-sunset.1920x1080.mp4" type="video/mp4">
     </video>
 
-    <nav class="navbar">
-        <div class="logo">
-            <a href="#">William DU</a>
-        </div>
-        <div class="links">
-            <a href="#about">À propos</a>
-            <a href="#skills">Compétences</a>
-            <a href="#education">Parcours scolaire</a>
-            <a href="#experience">Expériences</a>
-            <a href="#veille-technologique">Veille technologique</a>
-            <a href="#projects">Projets</a>
-            <a href="#contact">Contact</a>
-            <a href="#social-media">Mes réseaux</a>
+    <!-- Overlay pour améliorer la lisibilité -->
+    <div class="video-overlay"></div>
+
+    <!-- Navigation améliorée avec menu mobile -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#">William DU</a>
+            </div>
+            
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="links" id="navLinks">
+                <a href="#about" class="nav-link">À propos</a>
+                <a href="#education" class="nav-link">Parcours</a>
+                <a href="#BTS" class="nav-link">BTS SIO</a>
+                <a href="#experience" class="nav-link">Expériences</a>
+                <a href="#skills" class="nav-link">Compétences</a>
+                <a href="#projects" class="nav-link">Projets</a>
+                <a href="#veille-technologique" class="nav-link">Veille Tech</a>
+                <a href="#documentation" class="nav-link">Documents</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
         </div>
     </nav>
 
-    <div class="neon-text">
-        <span>Bienvenue</span> <span>sur mon Portfolio</span>
-    </div>
-    <p class="intro">Découvrez mon parcours, mes projets et comment me contacter !</p><br/>
-    <p class="intro">Le site est en accès anticipé</p>
+    <!-- Hero Section améliorée -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="neon-text">
+                <span class="welcome-text">Bienvenue</span>
+                <span class="portfolio-text">sur mon Portfolio</span>
+            </div>
+            <p class="intro">Découvrez mon parcours, mes projets et comment me contacter !</p>
+            <div class="status-badge">
+                <i class="fas fa-rocket"></i>
+                <span>Site en accès anticipé</span>
+            </div>
+            <a href="#about" class="cta-button">
+                Découvrir mon parcours
+                <i class="fas fa-arrow-down"></i>
+            </a>
+        </div>
+    </section>
 
-    <main>
-        <section id="about">
-            <h1>Qui suis-je ?</h1>
-            <div class="profile-picture">
-                <img src="William.jpg" alt="Photo de profil de William">
+    <main class="main-content">
+        <!-- Section À propos améliorée -->
+        <section id="about" class="content-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h1 class="section-title">Qui suis-je ?</h1>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="profile-picture">
+                        <img src="img/William.jpg" alt="Photo de profil de William">
+                        <div class="profile-ring"></div>
+                    </div>
+                    
+                    <div class="about-text">
+                        <p class="highlight-text">Je m'appelle William, j'ai 22 ans et je suis étudiant en 1ère année de BTS SIO option SLAM.</p>
+                        <p>J'ai commencé à m'intéresser à l'informatique dès mon plus jeune âge, en jouant à des jeux vidéo et en explorant les bases de la programmation.</p>
+                        <p>Depuis, ma passion pour l'informatique n'a cessé de grandir, et je suis déterminé à en faire ma carrière.</p>
+                        <p>Découvrez mes passions et ce que je fais actuellement en informatique.</p>
+                    </div>
+                </div>
             </div>
-            <p>Je m'appelle William, j'ai 22 ans et je suis étudiant en 1ère année de BTS SIO option SLAM.</p><br/>
-            <p>J'ai commencé à m'intéresser à l'informatique dès mon plus jeune âge, en jouant à des jeux vidéo et en explorant les bases de la programmation.</p><br/>
-            <p>Depuis, ma passion pour l'informatique n'a cessé de grandir, et je suis déterminé à en faire ma carrière.</p><br/>
-            <p>Découvrez mes passions de ce que je fais en ce moment en informatique.</p>
-        </section>
-
-        <section id ="education">
-            <h1>Présentation du parcours scolaire</h1>
-            <div class="education-timeline">
-                <p>
-                    2022 - 2023 : 1ère année de licence portail Chimie Biologie à l'UVSQ (Université de ST Quentin en Yvelines)
-                    <img src="UVSQ_Logo.png" alt="UVSQ">
-                </p>
-                <p>
-                    2023 - 2024 : 1ère année de licence portail Biologie Informatique toujours à l'UVSQ (Université de ST Quentin en Yvelines)
-                    <img src="UVSQ_Logo.png" alt="UVSQ">
-                </p>
-                <p>
-                    2024 - 2026 : 1ère année de BTS SIO SLAM à l'IPSSI Grande école Informatique à Paris XIIème arrondissement
-                    <img src="IPSSI-logo-300.jpg" alt="Ipssi">
-                </p>
-            </div>
-        </section>
-
-        <section class="experiences-section">
-          <h1>Mes Expériences professionnelles</h1>
-          <p>Voici un aperçu de mes expériences professionnelles :</p>
-          <div class="timeline">
-            <div class="timeline-item">
-              <span class="timeline-dot"></span>
-              <div class="timeline-content">
-                <strong>Janvier 2019 : Stage d'observation de 3ème Boulangerie "Chez Michel" (1 semaine)</strong>
-                <div class="mission">Mission : préparation des viennoiseries et entretien de la boutique.</div>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <span class="timeline-dot"></span>
-              <div class="timeline-content">
-                <strong>Avril - juin 2025 : Stage Free S-Cool (2 mois)</strong>
-                <div class="mission">Mission : Création d'une interface graphique responsive et optimisation du site (HTML, CSS, JavaScript).</div>
-              </div>
-              <a href="stage 2.0/event.html" target="_blank">
-                <img class="timeline-img" src="Free S-Cool.png" alt="Free S-Cool">
-              </a>
-            </div>
-          </div>
         </section>
 
-        <section id="projects">
-            <h1>Mes Projets</h1>
-            <p>Voici quelques projets sur lesquels j'ai travaillé (d'autres projets apparaîtront prochainement) :</p>
-            <ul class="project-list">
-                <li>
-                    <a href="C:\Users\Choco\Documents\Portfolio-de-William-principal\Portfolio-de-William-principal\portfolio\Iristech\IrisTech\Accueil (1).html" target="_blank">
-                        <img src="undefined.png" alt="IrisTech">
-                    </a>
-                </li>
-                <li>
-                    <a href="Portfolio de Drazonia/Portfolio Drazonia.html" target="_blank">
-                        <img src="Sticker_PPG_20_The_Herta_02.png" alt="The Herta">
-                    </a>
-                </li>
-                <li>
-                    <img src="lovepik-bookstore-in-winter-.png" alt="storebooks">
-                </li>
-                <li>
-                    <a href="https://github.com/Chocolait94/jeu-du-pendu.git" target="_blank">
-                        <img src="bourreau.png" alt="Jeu du Pendu">
-                    </a>
-                </li>
-            </ul>    
-        </section>
-        <section id="skills">
-            <h1>Compétences</h1>
-            <p>les langages que j'utilise actuellement pour les projets :</p>
-            <ul>
-                <img src="html-5.png" alt="HTML5" class="skill-icon">
-                <img src="css-3.png" alt="CSS3" class="skill-icon">
-                <img src="js.png" alt="JavaScript" class="skill-icon">
-                <img src="php.png" alt="PHP" class="skill-icon">
-                <img src="sql.png" alt="SQL" class="skill-icon">
-                <img src="python.png" alt="Python" class="skill-icon">
-            </ul>
-        </section>
-        <section id="veille-technologique">
-            <h1>Veille technologique</h1>
-            <p>J'ai présenté ma veille technologie sur les logiciels de triches</p><br/>
-            <p>Cela a pour but de vous sensibilisez afin de vous montrez sur ces logiciels de triches</p><br/>
-            <p>peuvent être dangereux pour votre ordinateur et vos données personnelles.</p>
-            <p>Voici la vidéo de présentation :</p>
-            <div class="presentation-video">
-                <video src="Logiciels_Triche_Presentation 1.mp4" controls></video>
+        <!-- Section Parcours scolaire améliorée -->
+        <section id="education" class="content-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h1 class="section-title">Parcours Scolaire</h1>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="education-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2022 - 2023</div>
+                            <h3>Licence Portail Chimie Biologie</h3>
+                            <p class="institution">UVSQ - Université de ST Quentin en Yvelines, Versailles</p>
+                            <img src="img/UVSQ_Logo.png" alt="UVSQ" class="institution-logo">
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2023 - 2024</div>
+                            <h3>Licence Portail Biologie Informatique</h3>
+                            <p class="institution">UVSQ - Université de ST Quentin en Yvelines, Versailles</p>
+                            <img src="img/UVSQ_Logo.png" alt="UVSQ" class="institution-logo">
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item active">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2024 - 2026</div>
+                            <h3>BTS SIO SLAM</h3>
+                            <p class="institution">IPSSI Grande École Informatique, Paris XIIème</p>
+                            <img src="img/IPSSI-logo-300.jpg" alt="IPSSI" class="institution-logo">
+                            <span class="current-badge">En cours</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>    
-
-        <section id="contact" class="contact">
-            <h2>Contactez-moi</h2>
-            <p>Vous pouvez me joindre à l'adresse suivante :</p>
-            <a href="mailto:Chocolait94@hotmail.com">📧 Chocolait94@hotmail.com</a>
         </section>
-        <section id="social-media">
-            <h1>Mes réseaux</h1>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/william-du-063083311/" target="_blank">
-                    <img src="linkedin.png" alt="linkedin">
-                </a>
-                <a href="https://github.com/Chocolait94" target="_blank">
-                    <img src="github.png" alt="github">
-                </a>
+
+        <!-- Section BTS SIO améliorée -->
+        <section id="BTS" class="content-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h1 class="section-title">BTS SIO - Services Informatiques aux Organisations</h1>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="bts-content">
+                    <div class="bts-intro">
+                        <p>Le BTS SIO est un diplôme français de niveau Bac+2 qui forme des professionnels capables de concevoir, développer et maintenir des solutions informatiques adaptées aux besoins des entreprises.</p>
+                    </div>
+                    
+                    <div class="bts-options">
+                        <div class="option-card slam-option">
+                            <div class="option-header">
+                                <i class="fas fa-code"></i>
+                                <h3>SLAM</h3>
+                            </div>
+                            <h4>Solutions Logicielles et Applications Métiers</h4>
+                            <p>Axée sur le développement d'applications, la programmation et la gestion de bases de données.</p>
+                            <span class="my-choice">Mon choix actuel</span>
+                        </div>
+                        
+                        <div class="option-card sisr-option">
+                            <div class="option-header">
+                                <i class="fas fa-network-wired"></i>
+                                <h3>SISR</h3>
+                            </div>
+                            <h4>Solutions d'Infrastructure, Systèmes et Réseaux</h4>
+                            <p>Axée sur l'administration des systèmes et réseaux, la sécurité informatique et la gestion des infrastructures.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bts-careers">
+                        <h3>Débouchés professionnels</h3>
+                        <div class="careers-grid">
+                            <div class="career-item">
+                                <i class="fas fa-laptop-code"></i>
+                                <span>Développeur Web</span>
+                            </div>
+                            <div class="career-item">
+                                <i class="fas fa-server"></i>
+                                <span>Administrateur Systèmes</span>
+                            </div>
+                            <div class="career-item">
+                                <i class="fas fa-database"></i>
+                                <span>Analyste Programmeur</span>
+                            </div>
+                            <div class="career-item">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Chef de Projet IT</span>
+                            </div>
+                            <div class="career-item">
+                                <i class="fas fa-user-tie"></i>
+                                <span>Consultant Informatique</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bts-motivation">
+                        <h3>Ma motivation</h3>
+                        <p>En tant qu'étudiant en BTS SIO option SLAM, je me spécialise dans le développement d'applications et la création de solutions logicielles adaptées aux besoins des entreprises.</p>
+                        <p>Je suis passionné par la programmation et je m'efforce de rester à jour avec les dernières technologies et tendances du secteur.</p>
+                        <p>Mon objectif est de devenir un développeur compétent et polyvalent, capable de concevoir des applications innovantes et de contribuer à la transformation numérique des organisations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Expériences améliorée -->
+        <section id="experience" class="content-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h1 class="section-title">Expériences Professionnelles</h1>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="experiences-grid">
+                    <div class="experience-card">
+                        <div class="experience-icon">
+                            <i class="fas fa-bread-slice"></i>
+                        </div>
+                        <div class="experience-content">
+                            <div class="experience-header">
+                                <h3>Stage d'observation de 3ème</h3>
+                                <span class="experience-date">Janvier 2019</span>
+                            </div>
+                            <p class="experience-company">Boulangerie "Chez Michel"</p>
+                            <p class="experience-duration">1 semaine</p>
+                            <div class="experience-mission">
+                                <strong>Mission :</strong> Préparation des viennoiseries et entretien de la boutique
+                            </div>
+                            <a href="https://www.facebook.com/ChezMichelBoulangerieParis" target="_blank" class="experience-link">
+                                <img src="img/images.png" alt="Boulangerie">
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-card featured">
+                        <div class="experience-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="experience-content">
+                            <div class="experience-header">
+                                <h3>Stage Développement Web</h3>
+                                <span class="experience-date">Avril - Juin 2025</span>
+                            </div>
+                            <p class="experience-company">Free S-Cool</p>
+                            <p class="experience-duration">2 mois</p>
+                            <div class="experience-mission">
+                                <strong>Mission :</strong> Création d'une interface graphique responsive et optimisation du site (HTML, CSS, JavaScript)
+                            </div>
+                            <a href="stage 2.0/event.html" target="_blank" class="experience-link">
+                                <img src="img/Free S-Cool.png" alt="Free S-Cool">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Compétences améliorée -->
+        <section id="skills" class="content-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h1 class="section-title">Compétences Techniques</h1>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <p class="section-subtitle">Les langages et technologies que j'utilise pour mes projets</p>
+                
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <img src="img/html-5.png" alt="HTML5">
+                        </div>
+                        <h3>HTML5</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <img src="img/css-3.png" alt="CSS3">
+                        </div>
+                        <h3>CSS3</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <img src="img/js.png" alt="JavaScript">
+                        </div>
+                        <h3>JavaScript</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <img src="img/php.png" alt="PHP">
+                        </div>
+                        <h3>PHP</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <img src="img/sql.png" alt="SQL">
+                        </div>
+                        <h3>SQL</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <img src="img/python.png" alt="Python">
+                        </div>
+                        <h3>Python</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Projets améliorée -->
+        <section id="projects" class="content-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h1 class="section-title">Mes Projets</h1>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <p class="section-subtitle">Découvrez quelques projets sur lesquels j'ai travaillé</p>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <a href="Iristech/Iristech/Accueil (1).html" target="_blank">
+                            <div class="project-image">
+                                <img src="img/undefined.png" alt="IrisTech">
+                                <div class="project-overlay">
+                                    <i class="fas fa-eye"></i>
+                                    <span>Voir le projet</span>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>IrisTech</h3>
+                                <p>Site vitrine futuriste</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="project-card">
+                        <a href="https://portfolio-de-drazonia.vercel.app/" target="_blank">
+                            <div class="project-image">
+                                <img src="img/Sticker_PPG_20_The_Herta_02.png" alt="Portfolio Drazonia">
+                                <div class="project-overlay">
+                                    <i class="fas fa-eye"></i>
+                                    <span>Voir le projet</span>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Portfolio Drazonia</h3>
+                                <p>Portfolio personnel</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="img/lovepik-bookstore-in-winter-.png" alt="Storebooks">
+                            <div class="project-overlay coming-soon">
+                                <i class="fas fa-clock"></i>
+                                <span>Bientôt disponible</span>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Storebooks</h3>
+                            <p>Application de gestion de livres</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <a href="https://github.com/Chocolait94/jeu-du-pendu.git" target="_blank">
+                            <div class="project-image">
+                                <img src="img/bourreau.png" alt="Jeu du Pendu">
+                                <div class="project-overlay">
+                                    <i class="fas fa-eye"></i>
+                                    <span>Voir le code</span>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Jeu du Pendu</h3>
+                                <p>Jeu interactif en Python</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="project-card">
+                        <a href="Pokedex/index.html" target="_blank">
+                            <div class="project-image">
+                                <img src="img/shared image.jpeg" alt="Pokedex">
+                                <div class="project-overlay">
+                                    <i class="fas fa-eye"></i>
+                                    <span>Voir le projet</span>
+                                </div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Pokédex</h3>
+                                <p>Application web interactive</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Veille Technologique améliorée -->
+        <section id="veille-technologique" class="content-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h1 class="section-title">Veille Technologique</h1>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="veille-content">
+                    <div class="veille-intro">
+                        <div class="warning-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Sensibilisation aux logiciels de triche</h3>
+                        <p>J'ai présenté ma veille technologique sur les logiciels de triche. Cette présentation a pour but de sensibiliser aux dangers que ces logiciels peuvent représenter pour votre ordinateur et vos données personnelles.</p>
+                    </div>
+                    
+                    <div class="video-container">
+                        <video src="video background/Logiciels_Triche_Presentation 1.mp4" controls aria-label="Présentation sur les logiciels de triche"></video>
+                    </div>
+                    
+                    <div class="sources-section">
+                        <h3>Sources utilisées</h3>
+                        <div class="sources-grid">
+                            <a href="https://www.cheatengine.org/" target="_blank" class="source-link">
+                                <i class="fas fa-link"></i>
+                                Cheat Engine
+                            </a>
+                            <a href="https://www.wemod.com/" target="_blank" class="source-link">
+                                <i class="fas fa-link"></i>
+                                WeMod
+                            </a>
+                            <a href="https://www.artmoney.ru/" target="_blank" class="source-link">
+                                <i class="fas fa-link"></i>
+                                ArtMoney
+                            </a>
+                            <a href="https://www.macrorecorder.com/" target="_blank" class="source-link">
+                                <i class="fas fa-link"></i>
+                                Macro Recorder
+                            </a>
+                            <a href="https://aimware.net/" target="_blank" class="source-link">
+                                <i class="fas fa-link"></i>
+                                Aimware
+                            </a>
+                            <a href="https://www.unknowncheats.me/" target="_blank" class="source-link">
+                                <i class="fas fa-link"></i>
+                                UnknownCheats
+                            </a>
+                            <a href="https://www.engineowning.to/" target="_blank" class="source-link">
+                                <i class="fas fa-link"></i>
+                                EngineOwning
+                            </a>
+                        </div>
+                        
+                        <div class="disclaimer">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <p>Ces logiciels sont principalement utilisés dans les jeux FPS pour obtenir des avantages injustes. Leur utilisation est interdite par la plupart des éditeurs de jeux et peut entraîner un bannissement permanent.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Documentation améliorée -->
+        <section id="documentation" class="content-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h1 class="section-title">Documentation & CV</h1>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="docs-grid">
+                    <div class="doc-card">
+                        <div class="doc-preview">
+                            <iframe src="du-william-cv 4.pdf" frameborder="0"></iframe>
+                        </div>
+                        <div class="doc-info">
+                            <h3>Mon Curriculum Vitae</h3>
+                            <p>Retrouvez mon parcours et mes compétences</p>
+                            <a href="du-william-cv 4.pdf" target="_blank" class="download-btn">
+                                <i class="fas fa-download"></i>
+                                Télécharger le CV
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="doc-card">
+                        <div class="doc-preview">
+                            <iframe src="8-1 - BTS SIO - 2025 - Annexe 8-1 - Epreuve E5 - Tableau de synthese.pdf" frameborder="0"></iframe>
+                        </div>
+                        <div class="doc-info">
+                            <h3>Tableau de Synthèse</h3>
+                            <p>Épreuve E5 - BTS SIO 2025</p>
+                            <a href="8-1 - BTS SIO - 2025 - Annexe 8-1 - Epreuve E5 - Tableau de synthese.xlsx" target="_blank" class="download-btn">
+                                <i class="fas fa-download"></i>
+                                Télécharger le tableau
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contact améliorée -->
+        <section id="contact" class="content-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h1 class="section-title">Me Contacter</h1>
+                    <div class="title-underline"></div>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Envoyez-moi un message</h3>
+                        <p>Vous pouvez me joindre pour toute opportunité professionnelle ou question</p>
+                        <a href="mailto:Chocolait94@hotmail.com" class="email-link">
+                            <i class="fas fa-paper-plane"></i>
+                            Chocolait94@hotmail.com
+                        </a>
+                    </div>
+                    
+                    <div class="social-media">
+                        <h3>Mes Réseaux Sociaux</h3>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/william-du-063083311/" target="_blank" class="social-btn linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/Chocolait94" target="_blank" class="social-btn github">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 William - Portfolio BTS SIO SLAM</p>
+    <!-- Footer amélioré -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 William DU - Portfolio BTS SIO SLAM</p>
+            <p class="footer-subtitle">Conçu avec passion et dédication</p>
+        </div>
     </footer>
+
+    <!-- Bouton retour en haut amélioré -->
+    <button id="scrollToTopBtn" class="scroll-top-btn" title="Retour en haut" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </body>
 </html>

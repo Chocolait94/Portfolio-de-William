@@ -93,7 +93,7 @@
         </ul>
         <div class="mobile-user">
             <span class="material-symbols-outlined">account_circle</span>
-            Adrien Laffarge
+            Mon compte
         </div>
     </div>
 
@@ -102,8 +102,15 @@
         <section class="events">
             <h1>Événements<span class="material-icons-sharp">circle</span></h1>
 
+            <!-- Système de filtre -->
+            <div class="event-filters">
+                <button class="filter-btn active" data-category="culturel">Culturel</button>
+                <button class="filter-btn" data-category="sportif">Sportif</button>
+                <button class="filter-btn" data-category="academique">Académique</button>
+            </div>
+
             <!-- Catégorie Culturel -->
-            <div class="category">
+            <div class="category" id="culturel">
                 <h2>Culturel</h2>
                 <div class="event-list">
                     <!-- Événement 1 -->
@@ -176,13 +183,13 @@
             </div>
 
             <!-- Catégorie Sportif -->
-            <div class="category">
+            <div class="category" id="sportif">
                 <h2>Sportif</h2>
                 <p>Il n'y a pas d'événements à venir</p>
             </div>
 
             <!-- Catégorie Académique -->
-            <div class="category">
+            <div class="category" id="academique">
                 <h2>Académique</h2>
                 <p>Il n'y a pas d'événements à venir</p>
             </div>
@@ -200,14 +207,35 @@
         const mobileMenu = document.getElementById("mobileMenu");
         const closeMenu = document.getElementById("closeMenu");
 
-        // Ouvre le menu mobile
         menuBtn.addEventListener("click", () => {
             mobileMenu.classList.add("active");
         });
 
-        // Ferme le menu mobile
         closeMenu.addEventListener("click", () => {
             mobileMenu.classList.remove("active");
+        });
+
+        // Système de filtre
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const categories = document.querySelectorAll('.category');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const cat = btn.getAttribute('data-category');
+                categories.forEach(c => {
+                    if (c.id === cat) {
+                        c.style.display = '';
+                    } else {
+                        c.style.display = 'none';
+                    }
+                });
+            });
+        });
+        // Affiche seulement la première catégorie au chargement
+        categories.forEach(c => {
+            if (c.id !== 'culturel') c.style.display = 'none';
         });
     </script>
 </html>

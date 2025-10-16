@@ -10,6 +10,11 @@ body {
     overflow-y: auto;   /* Permet le défilement vertical si le contenu dépasse */
     display: flex;
     flex-direction: column;
+    background-image: url('background.png');
+    background-size: cover; /* Couvre tout l'écran */
+    background-position: center; /* Centre l'image de fond */
+    background-attachment: fixed; /* Fixe l'image de fond pour un effet de parallaxe */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
 }
 
 /* ---------- Navbar ---------- */
@@ -452,7 +457,7 @@ body {
         overflow-y: auto;   /* Maintient l'overflow-y auto */
     }
     .navbar {
-        width: 100%; /* S'assure que la navbar prend 100% de la largeur */
+        width: 106%; /* S'assure que la navbar prend 100% de la largeur */
         padding: 0.5rem 1rem; /* Ajuste le padding */
         padding-bottom: 10px; /* Ajuste le padding bottom */
         position: relative; /* Garde relative pour que le menu puisse être positionné par rapport à elle */
@@ -645,22 +650,6 @@ body {
     margin: 10px 0;
 }
 
-.shadow__btn {
-    background: #536ee9;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 20px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    cursor: pointer;
-    box-shadow: 0 5px 8px rgba(83, 110, 233, 0.7);
-    transition: background-color 0.3s ease;
-}
-
-.shadow__btn:hover {
-    background: #3f57c1;
-}
 
 .map-container {
     position: relative;
@@ -689,7 +678,7 @@ footer {
     font-size: 0.9rem;
     color: #999;
     margin-top: auto; /* Pousse le footer en bas de la page */
-    border-top: 1px solid #ddd;
+    border-top: 1px;
     flex-shrink: 0; /* Empêche le footer de rétrécir */
 }
 
@@ -700,6 +689,11 @@ footer {
     margin: 40px auto;
     font-family: "Rubik", sans-serif;
     flex-grow: 1; /* Permet à la section événements de prendre l'espace restant */
+    border-radius : 1rem;
+    padding : 2rem; 
+    backdrop-filter: blur(36px);
+    box-shadow: 0 0 40px #ad7add33;
+    animation : fadeIn 0.5s ease-in-out; /* Animation d'apparition */
 }
 .events h1 {
     font-size: 2.2rem;
@@ -714,6 +708,7 @@ footer {
 .category h2 {
     font-size: 1.4rem;
     margin-bottom: 1rem;
+    text-align: center;
 }
 .event-list {
     display: flex;
@@ -816,6 +811,9 @@ footer {
 }
 .event-details button:hover {
     background: #536ee9;
+}
+.event-details button:hover {
+    background: #3f57c1;
 }
 
 .material-icons-sharp {
@@ -963,15 +961,24 @@ footer {
     color: #333;
     font-size: 1.7rem;
 }
-
-/* Responsive pour le menu burger */
-@media (max-width: 640px) {
-    .mobile-menu {
-        width: 95vw;
-        height: 884px;
-        padding: 1.2rem 0.7rem 0.7rem 0.7rem;
-    }
-    .mobile-user {
-        font-size: 0.95rem;
-    }
+.event-filters {
+    margin-bottom: 2rem;
+    text-align: center;
 }
+.filter-btn {
+    background: #f0f0f0;
+    border: none;
+    padding: 0.7em 1.5em;
+    margin: 0 0.5em;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #536ee9;
+    transition: background 0.2s, color 0.2s;
+}
+.filter-btn.active,
+.filter-btn:hover {
+    background: #536ee9;
+    color: #fff;
+}
+
